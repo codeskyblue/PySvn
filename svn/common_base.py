@@ -37,7 +37,7 @@ class CommonBase(object):
         if return_binary is True or do_combine is True:
             return stdout
 
-        return stdout.decode(encoding='utf-8', error='ignore').strip('\n').split('\n')
+        return stdout.decode(encoding='utf-8', errors='ignore').strip('\n').split('\n')
 
     def rows_to_dict(self, rows, lc=True):
         d = {}
